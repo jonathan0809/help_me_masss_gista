@@ -15,8 +15,8 @@ class UserController extends Controller
 }
 
  public function form_tambah_user(){
-      
-        $user= User::all(); 
+
+        $user= User::all();
         return view('user.tambah_user', compact('user'));
     }
 
@@ -28,7 +28,7 @@ class UserController extends Controller
             'password' => request('password')
 
         ]);
-        return redirect('/beranda_admin/data_user')->with('sukses','Data Berhasil Disimpan');
+        return redirect('/beranda_pelanggan/data_user')->with('sukses','Data Berhasil Disimpan');
     }
 
       public function edit(User $user){
@@ -39,16 +39,16 @@ class UserController extends Controller
             User::where('id', $user->id)->update([
             'user' => request('user')
         ]);
-         return redirect()->to('/beranda_admin/data_user');
+         return redirect()->to('/beranda_pelanggan/data_user');
 
     }
          public function delete($id){
           $user = \App\Models\User::find($id);
           $user->delete($user);
-          return redirect('/beranda_admin/data_user')->with('sukses','Data Berhasil Dihapus');
+          return redirect('/beranda_pelanggan/data_user')->with('sukses','Data Berhasil Dihapus');
     }
 
 
 
 }
-    	
+

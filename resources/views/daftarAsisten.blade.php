@@ -17,7 +17,7 @@
                         <div class="col">
                           <div class="card shadow-sm">
                               <div class="card-body text-center">
-                                <img src="/storage/" class="img-fluid">
+                                <img src="{{ asset('storage/'.$item->foto) }}" class="img-fluid" width="200px" height="200px">
                              </div>
                             <div class="card-body">
                                 <h5><strong>{{ $item->nama }}</strong> </h5>
@@ -25,7 +25,7 @@
                                 <h5><strong>Rp. {{ $item->harga }}</strong> </h5>
                               <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <a href="{{ url('pekerja/'.$item->id.'/profile') }}" class="btn btn-dark btn-block"><i class="fas fa-eye"></i> Lihat Profile</a>
+                                    <a href="{{ url('profiledetailpekerja/'.$item->id) }}" class="btn btn-dark btn-block"><i class="fas fa-eye"></i> Lihat Profile</a>
                                 </div>
                               </div>
                             </div>

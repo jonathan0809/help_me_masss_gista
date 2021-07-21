@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>List Supir</title>
+		<title>Generic - Phantom by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{{asset('HomeAssets/assets/css/main.css')}}" />
@@ -22,7 +22,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">PRT</span>
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
 								</a>
 
 							<!-- Nav -->
@@ -39,21 +39,23 @@
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-                            <li><a href="pelanggan">Home</a></li>
-                            <li><a href="profilpel">Profile</a></li>
-                            <li><a href="tentangkami">Tentang Kami</a></li>
-                            <li><a href="logout">Keluar</a></li>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="generic.html">Ipsum veroeros</a></li>
+							<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="generic.html">Consequat dolor</a></li>
+							<li><a href="elements.html">Elements</a></li>
 						</ul>
 					</nav>
 
-				@yield('content')
 
-		<!-- Scripts -->
+                    @yield('content')
 
-			<script src="{{asset('HomeAssets/assets/js/jquery.min.js')}}"></script>
-			<script src="{{asset('HomeAssets/assets/js/browser.min.js')}}"></script>
-			<script src="{{asset('HomeAssets/assets/js/breakpoints.min.js')}}"></script>
-			<script src="{{asset('HomeAssets/assets/js/util.js')}}"></script>
-			<script src="{{asset('HomeAssets/assets/js/main.js')}}"></script>
+                    <!-- Scripts -->
+                    <script src="{{asset('HomeAssets/assets/js/jquery.min.js')}}"></script>
+                    <script src="{{asset('HomeAssets/assets/js/browser.min.js')}}"></script>
+                    <script src="{{asset('HomeAssets/assets/js/breakpoints.min.js')}}"></script>
+                    <script src="{{asset('HomeAssets/assets/js/util.js')}}"></script>
+                    <script src="{{asset('HomeAssets/assets/js/main.js')}}"></script>
+
 	</body>
 </html>

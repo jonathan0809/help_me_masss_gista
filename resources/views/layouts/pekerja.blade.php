@@ -23,7 +23,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="HomeAssets/images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+									<span class="symbol"><img src="HomeAssets/images/logo.svg" alt="" /></span><span class="title">PRT</span>
 								</a>
 
 							<!-- Nav -->
@@ -40,14 +40,10 @@
                 <nav id="menu">
                     <h2>Menu</h2>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        {{-- <li><a href="{{ url('pelanggan/'.$profil->id.'/profilepel') }}">Profile</a></li> --}}
-                        <li><a href="">Tentang Kami</a></li>
-                        <form action="/logout" method="post" id="form1">
-                            @csrf
-                            <button type="submit" class="dropdown-item ai-icon">
-                            <span class="ml-2">Log out </span>
-                        </form>
+                        <li><a href="pelanggan">Home</a></li>
+                        <li><a href="profilpel">Profile</a></li>
+                        <li><a href="tentangkami">Tentang Kami</a></li>
+                        <li><a href="logout">Keluar</a></li>
                     </ul>
                 </nav>
 

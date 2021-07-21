@@ -39,10 +39,11 @@
                 <nav id="menu">
                     <h2>Menu</h2>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="">Profile</a></li>
-                        <li><a href="">Tentang Kami</a></li>
-                        <li><a href="">Keluar</a></li>
+                        {{-- {{ url('profilpel') }} --}}
+                        <li><a href="pelanggan">Home</a></li>
+                        <li><a href="profilpel">Profile</a></li>
+                        <li><a href="tentangkami">Tentang Kami</a></li>
+                        <li><a href="logout">Keluar</a></li>
                     </ul>
                 </nav>
 
@@ -50,7 +51,7 @@
 
 
 				<!-- Footer -->
-					<footer id="footer">
+					{{-- <footer id="footer">
 						<div class="inner">
 							<section>
 								<h2>Get in touch</h2>
@@ -88,7 +89,7 @@
 								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
-					</footer>
+					</footer> --}}
 
 			</div>
 
