@@ -6,9 +6,9 @@
     <div id="main">
         <div class="inner">
             <header>
-                <h1>This is Phantom, a free, fully responsive site<br />
-                template designed by <a href="http://html5up.net">HTML5 UP</a>.</h1>
-                <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
+                <h1>Selamat datang Pelanggan, {{ Auth::user()->username }}.<br />
+                </a></h1>
+                <p></p>
             </header>
             <section class="tiles">
                 <article class="style1">
@@ -18,7 +18,7 @@
                     <a href={{ route('listart') }}>
                         <h2>Asisten Rumah Tangga</h2>
                         <div class="content">
-                            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                            <p>Melihat daftar pekerja Asisten Rumah Tangga</p>
                         </div>
                     </a>
                 </article>
@@ -29,7 +29,7 @@
                     <a href="{{ route('listbaby') }}">
                         <h2>Baby Sitter</h2>
                         <div class="content">
-                            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                            <p>Melihat daftar pekerja Baby Sitter</p>
                         </div>
                     </a>
                 </article>
@@ -40,7 +40,7 @@
                     <a href="{{ route('listpengasuh') }}">
                         <h2>Pengasuh Orang Tua (Lansia)</h2>
                         <div class="content">
-                            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                            <p>Melihat daftar pekerja Pengasuh Orang Tua (Lansia)</p>
                         </div>
                     </a>
                 </article>
@@ -51,7 +51,7 @@
                     <a href="{{ route('listsecurity') }}">
                         <h2>Security</h2>
                         <div class="content">
-                            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                            <p>Melihat daftar pekerja Security</p>
                         </div>
                     </a>
                 </article>
@@ -62,21 +62,9 @@
                     <a href="{{ route('listsupir') }}">
                         <h2>Supir</h2>
                         <div class="content">
-                            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                            <p>Melihat daftar pekerja Supir</p>
                         </div>
                     </a>
-                </article>
-                <article class="style6">
-                    <span class="image">
-                        <img src="HomeAssets/images/pic06.jpg" alt="" />
-                    </span>
-                    <a href="generic.html">
-                        <h2>Pekerja Aktif Dan Riwayat</h2>
-                        <div class="content">
-                            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
-                        </div>
-                    </a>
-                </article>
             </section>
         </div>
     </div>

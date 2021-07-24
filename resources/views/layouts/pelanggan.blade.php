@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Phantom by HTML5 UP</title>
+		<title>Home</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="{{asset('HomeAssets/assets/css/main.css')}}" />
@@ -23,7 +23,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="HomeAssets/images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+									<span class="symbol"><img src="HomeAssets/images/logo.svg" alt="" /></span><span class="title">PRT</span>
 								</a>
 
 							<!-- Nav -->
@@ -42,7 +42,7 @@
                         {{-- {{ url('profilpel') }} --}}
                         <li><a href="pelanggan">Home</a></li>
                         <li><a href="profilpel">Profile</a></li>
-                        <li><a href="tentangkami">Tentang Kami</a></li>
+                        <li><a href="{{ route('riwayatDataPel') }}">Riwayat</a></li>
                         <li><a href="logout">Keluar</a></li>
                     </ul>
                 </nav>

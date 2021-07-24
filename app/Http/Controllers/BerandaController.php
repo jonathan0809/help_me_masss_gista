@@ -9,12 +9,12 @@ class BerandaController extends Controller
     public function beranda_pelanggan()
     {
 
-    	return view('beranda.berandapelanggaan');
+    	return view('berandapelanggan');
 
     }
 
     public function beranda_pekerja()
    {
-   	return view('beranda.berandapekerja');
+   	    return view('berandapekerja');
    }
 }

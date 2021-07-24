@@ -12,6 +12,8 @@ use App\Http\Controllers\detailProfileController;
 use App\Http\Controllers\EditProfilePelController;
 use App\Http\Controllers\profilePelangganController;
 use App\Http\Controllers\profileUser;
+use App\Http\Controllers\profilePekerjaController;
+use App\Http\Controllers\ratingController;
 use App\Http\Controllers\profileUserController;
 use Illuminate\Support\Facades\App;
 
@@ -38,7 +40,10 @@ Route::get('logout','App\Http\Controllers\AuthController@logout')->name('logout'
 
 Route::group(['middleware' => ['auth']], function () {
 Route::group(['middleware' => ['cek_login:Pekerja']], function () {
-Route::get('pekerja','App\Http\Controllers\PekekerjaHomeController@index')->name('pekerja');
+Route::get('pekerja','App\Http\Controllers\PekerjaHomeController@index')->name('pekerja');
+Route::get('/profilpek', [profilePekerjaController::class, 'profilpek']);
+Route::get('riwayatDataPek','App\Http\Controllers\RiwayatPekController@index')->name('riwayatDataPek');
+
 
 
 // Route::get('/beranda_admin/data_user',[UserController::class, 'data_user']);
@@ -52,7 +57,6 @@ Route::get('pekerja','App\Http\Controllers\PekekerjaHomeController@index')->name
 
 Route::group(['middleware' => ['cek_login:Pelanggan']], function () {
 Route::get('pelanggan','App\Http\Controllers\PelangganHomeController@index')->name('pelanggan');
-
 Route::get('listart','App\Http\Controllers\listArtController@listart')->name('listart');
 Route::get('listbaby','App\Http\Controllers\listBabyController@listbaby')->name('listbaby');
 Route::get('listpengasuh','App\Http\Controllers\listPengasuhController@listPengasuh')->name('listpengasuh');
@@ -61,11 +65,9 @@ Route::get('listsupir','App\Http\Controllers\listSupirController@listsupir')->na
 Route::get('/profiledetailpekerja/{user:id}', [detailProfileController::class, 'profileDetailPekerja']);
 Route::get('/profilpel', [profilePelangganController::class, 'profilpel']);
 Route::get('tentangkami','App\Http\Controllers\tentangKamiController@index')->name('tentangkami');
-Route::get('editProfilePel','App\Http\Controllers\EditProfilePelController@profilpelEdit')->name('editProfilePel');
-// Route::get('/editProfilePel/{user:id}', [EditProfilePelController::class, 'editProfilePel']);
-
-
-
+Route::get('profilpelEdit','App\Http\Controllers\EditProfilePelController@profilpelEdit')->name('profilpelEdit');
+Route::get('riwayatDataPel','App\Http\Controllers\RiwayatPelController@index')->name('riwayatDataPel');
+Route::get('ratingReview','App\Http\Controllers\ratingController@ratingUlasan')->name('ratingReview');
 
 });
 });

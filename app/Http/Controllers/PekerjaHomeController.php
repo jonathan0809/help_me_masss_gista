@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PekekerjaHomeController extends Controller
+class PekerjaHomeController extends Controller
 {
     public function index()
     {
