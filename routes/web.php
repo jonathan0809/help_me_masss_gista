@@ -16,6 +16,7 @@ use App\Http\Controllers\profilePekerjaController;
 use App\Http\Controllers\ratingController;
 use App\Http\Controllers\profileUserController;
 use Illuminate\Support\Facades\App;
+use phpDocumentor\Reflection\Types\Resource_;
 
 /*
 /*
@@ -68,6 +69,14 @@ Route::get('tentangkami','App\Http\Controllers\tentangKamiController@index')->na
 Route::get('profilpelEdit','App\Http\Controllers\EditProfilePelController@profilpelEdit')->name('profilpelEdit');
 Route::get('riwayatDataPel','App\Http\Controllers\RiwayatPelController@index')->name('riwayatDataPel');
 Route::get('ratingReview','App\Http\Controllers\ratingController@ratingUlasan')->name('ratingReview');
+Route::get('tambah','App\Http\Controllers\ratingController@tambah');
+Route::get('getLatitudeForInput','App\Http\Controllers\ratingController@getLatitudeForInput');
+Route::get('showModal','App\Http\Controllers\ratingController@showModal');
+// Route::get('ratingReview','App\Http\Controllers\ratingController@berhasil');
+// Route::get('ratingReview', ratingController::class)->middleware('auth');
+// Route::resource('ratingReview',[ratingController::class, 'ratingController@ratingUlasan','ratingController@tambah','ratingController@getLatitudeForInput','ratingController@showModal','ratingController@berhasil']);
+
+// Route::resource('ratingReview', 'ratingController');
 
 });
 });
