@@ -19,17 +19,15 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="basic-form" >
-                                        <form action="{{ url('tambah') }} autocomplete="off">
+                                        <form method='POST' action={{ url('tambah') }} autocomplete="off">
+                                            @csrf
                                             <div class="form-group row">
                                                 <label class="col-sm-3 col-form-label">Rating</label>
                                                 <div class="col-sm-9">
                                                     <div  class="rateyo" id="rating" data-rateyo-rating="0" data-rateyo-num-stars="5" data-rateyo-score="3" wire:ignore>
                                                     </div>
-                                                    getLatitudeForInput
-
                                                     <span class='result' wire:ignore>0</span>
                                                     <input type="hidden" name="rating" wire:model="rating">
-
                                                     <div>
                                                         @error('rating')
                                                         <span class="text-danger">{{ $message }}</span>
@@ -40,7 +38,7 @@
                                             <div class="form-group row">
                                                 <label class="col-sm-3 col-form-label">Keterangan</label>
                                                 <div class="col-sm-9">
-                                                    <textarea class="form-control" rows="4" wire:model="keterangan" style="color: black; resize: none;" placeholder="Masukkan keterangan"></textarea>
+                                                    <textarea name="keterangan" class="form-control" rows="4" wire:model="keterangan" style="color: black; resize: none;" placeholder="Masukkan keterangan"></textarea>
                                                     <div>
                                                         @error('keterangan')
                                                         <span class="text-danger">{{ $message }}</span>
@@ -51,7 +49,6 @@
                                             <div class="d-flex justify-content-end">
                                                 <button type="submit" class="btn btn-primary ml-3">Ok</button>
                                             </div>
-
                                         </form>
                                     </div>
                                 </div>

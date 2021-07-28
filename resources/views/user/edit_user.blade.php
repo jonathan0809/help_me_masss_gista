@@ -45,16 +45,16 @@
                 </div>
               </div>
 
-              <div class="form-group">
+              {{-- <div class="form-group">
                 <label class="col-sm-2 control-label">Level</label>
                 <div class="col-sm-5">
                    <select name="level" class="form-control" autocomplete="off" id="level">
                     <option value="">--Pilih Level--</option>
-          
-                                 
+
+
                    </select>
                 </div>
-              </div>
+              </div> --}}
 
 
             </div><!-- /.box body -->

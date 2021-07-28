@@ -1,4 +1,4 @@
-@extends('layouts.pelanggan')
+@extends('layouts.pekerja')
 @section('content')
 <div id="wrapper">
     <div id="main">

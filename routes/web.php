@@ -69,7 +69,7 @@ Route::get('tentangkami','App\Http\Controllers\tentangKamiController@index')->na
 Route::get('profilpelEdit','App\Http\Controllers\EditProfilePelController@profilpelEdit')->name('profilpelEdit');
 Route::get('riwayatDataPel','App\Http\Controllers\RiwayatPelController@index')->name('riwayatDataPel');
 Route::get('ratingReview','App\Http\Controllers\ratingController@ratingUlasan')->name('ratingReview');
-Route::get('tambah','App\Http\Controllers\ratingController@tambah');
+Route::post('tambah','App\Http\Controllers\ratingController@tambah');
 Route::get('getLatitudeForInput','App\Http\Controllers\ratingController@getLatitudeForInput');
 Route::get('showModal','App\Http\Controllers\ratingController@showModal');
 // Route::get('ratingReview','App\Http\Controllers\ratingController@berhasil');

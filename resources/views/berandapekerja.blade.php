@@ -16,9 +16,9 @@
                         <img src="HomeAssets/images/pic06.jpg" alt="" />
                     </span>
                     <a href="{{ route('riwayatDataPek') }}">
-                        <h2>Riwayat</h2>
+                        <h2>Kontrak dan Riwayat</h2>
                         <div class="content">
-                            <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+                            <p>Melihat kontrak dan riwayat</p>
                         </div>
                     </a>
                 </article>

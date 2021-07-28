@@ -57,8 +57,6 @@
             </div>
         </article>
 
-    <!-- Contact -->
-
 
 
         @endsection

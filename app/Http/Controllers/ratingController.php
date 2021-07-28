@@ -20,16 +20,18 @@ class ratingController extends Controller
         return view('ratingulasan');
     }
 
-    public function tambah()
+    public function tambah(Request $request)
     {
         // dd($this->rating);
         Rating::create([
             'user_id' => auth()->user()->id,
-            'keterangan' => $this->keterangan,
-            'rating' => $this->rating
+            'keterangan' => $request->keterangan,
+            'rating' => $request->rating
         ]);
 
-        $this->showModal();
+        // $this->showModal();
+        \Session::flash('sukses','Data berhasil ditambah');
+        return redirect('/ratingReview');
     }
 
     public function getLatitudeForInput($value)
@@ -45,6 +47,7 @@ class ratingController extends Controller
             'title' => 'Berhasil!!!',
             'text'  => "Berhasil memberi rating",
         ]);
+        $this->berhasil();
     }
 
     public function berhasil()
@@ -53,6 +56,4 @@ class ratingController extends Controller
             return redirect()->to('/pelanggan');
         }
     }
-
-
 }
