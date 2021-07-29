@@ -2,30 +2,22 @@
 
 namespace App\Http\Controllers;
 use App\Models\Pelanggan;
-use Carbon\Carbon;
+
 use App\Models\User;
 
 use Illuminate\Http\Request;
 
 class EditProfilePelController extends Controller
 {
-    // public $pelanggan;
 
-    public function profilpelEdit($id)
+
+
+    public function profilpelEdit()
     {
-        // $pelanggan = User::find($id);
-        return view('profilepelEdit', compact('pelanggan'));
+        $data = User::where('id','=',Auth()->user()->id)->first();
+        //dd($data);
+        return view('profilepelEdit',compact('data'));
     }
 
-    // public function profilepelupdate($id, Request $request)
-    // {
-    //     User::where('id', $id)->update([
-    //         'nama' => $request->nama,
-    //         'email' => $request->email,
-    //         'no_hp' => $request->no_hp,
-    //         'alamat' => $request->alamat,
-    //     ]);
-    //     \Session::flash('sukses','profil Berhasil Diubah');
-    //     return redirect('profilepelEdit')->with('status', 'Data Berhasil Diubah!');
-    // }
+
 }

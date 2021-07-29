@@ -13,7 +13,7 @@
                 <p>Sebelum <strong>Beri Kerja</strong> tolong, <strong>Hubungi Saya </strong>terlebih dahulu</p>
                 <a href="https://wa.me/{{ $profil->no_hp }}" class="button large">Hubungi Saya</a>
                     <a href="{{ url('ratingReview') }}" class="button large">Beri Ulasan</a>
-                    <a href="" class="button large scrolly">Beri Kerja</a>
+                    <a href="{{ url('pesan') }}" class="button large scrolly">Beri Kerja</a>
             </div>
 
         </div>

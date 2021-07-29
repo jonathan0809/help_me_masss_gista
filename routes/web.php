@@ -13,6 +13,7 @@ use App\Http\Controllers\EditProfilePelController;
 use App\Http\Controllers\profilePelangganController;
 use App\Http\Controllers\profileUser;
 use App\Http\Controllers\profilePekerjaController;
+use App\Http\Controllers\PesanController;
 use App\Http\Controllers\ratingController;
 use App\Http\Controllers\profileUserController;
 use Illuminate\Support\Facades\App;
@@ -37,7 +38,7 @@ Route::get('login','App\Http\Controllers\AuthController@index')->name('login');
 Route::post('proses_login','App\Http\Controllers\AuthController@proses_login')->name('proses_login');
 Route::get('logout','App\Http\Controllers\AuthController@logout')->name('logout');
 
-//auth -> admin || kasir
+
 
 Route::group(['middleware' => ['auth']], function () {
 Route::group(['middleware' => ['cek_login:Pekerja']], function () {
@@ -45,14 +46,6 @@ Route::get('pekerja','App\Http\Controllers\PekerjaHomeController@index')->name('
 Route::get('/profilpek', [profilePekerjaController::class, 'profilpek']);
 Route::get('riwayatDataPek','App\Http\Controllers\RiwayatPekController@index')->name('riwayatDataPek');
 
-
-
-// Route::get('/beranda_admin/data_user',[UserController::class, 'data_user']);
-// Route::get('/beranda_admin/form_tambah_user',[UserController::class, 'form_tambah_user']);
-// Route::post('/tambah_user', [UserController::class, 'create']);
-// Route::get('/beranda_admin/edit_user/{user:id}', [UserController::class, 'edit']);
-// Route::patch('/update_user/{user:id}', [UserController::class, 'update']);
-// Route::get('/hapus_user/{user:id}', [UserController::class, 'delete']);
 });
 
 
@@ -72,11 +65,7 @@ Route::get('ratingReview','App\Http\Controllers\ratingController@ratingUlasan')-
 Route::post('tambah','App\Http\Controllers\ratingController@tambah');
 Route::get('getLatitudeForInput','App\Http\Controllers\ratingController@getLatitudeForInput');
 Route::get('showModal','App\Http\Controllers\ratingController@showModal');
-// Route::get('ratingReview','App\Http\Controllers\ratingController@berhasil');
-// Route::get('ratingReview', ratingController::class)->middleware('auth');
-// Route::resource('ratingReview',[ratingController::class, 'ratingController@ratingUlasan','ratingController@tambah','ratingController@getLatitudeForInput','ratingController@showModal','ratingController@berhasil']);
-
-// Route::resource('ratingReview', 'ratingController');
+Route::get('pesan/{username}','App\Http\Controllers\PesanController@pesan')->name('pesan');
 
 });
 });
